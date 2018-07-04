@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/learningImage"
+        android:layout_width="130dp"
+        android:layout_height="102dp"
+        android:src="@drawable/semnan"
+        android:layout_marginLeft="3dp"
+        />
+
+    <TextView
+        android:id="@+id/learningText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="35dp"
+        android:text="زبان سمنانی"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        />
+
+</LinearLayout>
