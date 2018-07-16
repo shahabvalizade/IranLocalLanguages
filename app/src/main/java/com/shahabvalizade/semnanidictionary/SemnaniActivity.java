@@ -1,7 +1,10 @@
 package com.shahabvalizade.semnanidictionary;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -28,6 +31,16 @@ public class SemnaniActivity extends AppCompatActivity {
         LearningStepsAdapter learningStepsAdapter = new LearningStepsAdapter(this,learningSteps);
         ListView learningStepsList = (ListView) findViewById(R.id.list);
         learningStepsList.setAdapter(learningStepsAdapter);
-
+        //مشخص کردن مقصد هر کدام از المانهای لیست
+        learningStepsList.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if(position==0)
+                {
+                    Intent intent = new Intent(SemnaniActivity.this,SemnaniActivityStep1.class);
+                    startActivity(intent);
+                }
+            }
+        });
     }
 }
